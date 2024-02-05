@@ -19,7 +19,7 @@ class ProductModel {
     return ProductModel(
         id: jsonData["id"],
         title: jsonData["title"],
-        price: jsonData["price"],
+        price: jsonData['price'] == null ? 0.0 : jsonData['price'].toDouble(),
         description: jsonData["description"],
         category: jsonData["category"],
         image: jsonData["image"],
@@ -33,7 +33,7 @@ class RattingModel {
 
   RattingModel({required this.rate, required this.count});
   factory RattingModel.fromJson(jData) {
-    return RattingModel(rate: jData["rate"], count: jData["conut"]);
+    return RattingModel(rate: jData['rate'] == null ? 0.0 : jData['rate'].toDouble(), count: jData["conut"]);
   }
 }
  
