@@ -30,7 +30,7 @@ class CustomCard extends StatelessWidget {
               ),
               elevation: 10,
               child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+                padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.end,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -38,14 +38,14 @@ class CustomCard extends StatelessWidget {
                     Text(
                       product.title!.substring(0, 6),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(r"$" "${product.price.toString()}"),
-                        Icon(
+                        const Icon(
                           Icons.favorite,
                           color: Colors.red,
                         ),
